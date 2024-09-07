@@ -25,10 +25,14 @@ window = sg.Window("My TODO App",
                     font = ("Helvetica",10))
 
 while True:
-    event, values = window.read(timeout =30)
+    event, values = window.read(timeout =50)
+
+
+
+    if event in (None, "exit, sg.win_closed"):
+        break
+
     window["clock"].update(value=time.strftime("%d %b, %y %H %M %S"))
-
-
 
     match event:
         case "Add":
