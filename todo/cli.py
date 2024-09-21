@@ -14,15 +14,15 @@ while True:
     if user_action.startswith("add"):
         todo = user_action[4:]
 
-        todos = functions.get_todos("todos.txt")
+        todos = functions.get_todos("todos2.txt")
 
         todos.append(todo + "\n")
 
-        functions.write_todos(todos,"todos.txt", )
+        functions.write_todos(todos, "todos2.txt", )
 
     elif user_action.startswith("show"):
 
-        todos = functions.get_todos("todos.txt")
+        todos = functions.get_todos("todos2.txt")
 
         for index, item in enumerate(todos):
             item= item.strip("\n")
@@ -35,12 +35,12 @@ while True:
 
         number = number -1
 
-        todos = functions.get_todos("todos.txt")
+        todos = functions.get_todos("todos2.txt")
 
         new_todo =input("Edit a new todo: ")
         todos[number] = new_todo +"\n"
 
-        functions.write_todos(todos,"todos.txt")
+        functions.write_todos(todos, "todos2.txt")
 
 
 
@@ -49,12 +49,12 @@ while True:
         try:
             number = int(user_action[9:])
 
-            todos = functions.get_todos("todos.txt")
+            todos = functions.get_todos("todos2.txt")
             index = number -1
             todo_to_remove = todos[index].strip("\n")
             todos.pop(index)
 
-            functions.write_todos(todos,"todos.txt")
+            functions.write_todos(todos, "todos2.txt")
 
             message  = f"todo {todo_to_remove} has been deleted."
             print (message)
