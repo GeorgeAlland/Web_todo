@@ -3,7 +3,6 @@ Tue 08-10-24    19:00
 Mon 14-10-24    17:54
 meds
 carrot
-carrot
 Pumpkin
 uav
-uav
+orange

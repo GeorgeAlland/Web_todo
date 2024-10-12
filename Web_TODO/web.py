@@ -21,6 +21,7 @@ st.write("(Reminders and tasks)")
 for index, todo in enumerate(todos):
 
     test2 = f"({index}) {todo}"
+
     #st.warning(test2)
     #checkbox = st.checkbox(todo, key=todo)
     #checkbox = st.checkbox(test2, key=todo)
