@@ -7,4 +7,3 @@ carrot
 Pumpkin
 uav
 uav
-uav
