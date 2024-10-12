@@ -1,6 +1,6 @@
 import streamlit as st
 import functions
-#streamlit run web.py
+#del st.session_state[todo]
 
 todos = functions.get_todos()
 
