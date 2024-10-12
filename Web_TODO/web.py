@@ -13,9 +13,9 @@ def add_todo():
 
 
 
-st.title("My Dates")
-st.subheader("This is My Appointments.")
-st.write("This app is to remind me.")
+st.title("My Day")
+st.subheader("Things to do today")
+st.write("(Reminders and tasks)")
 
 
 for index, todo in enumerate(todos):
@@ -23,11 +23,13 @@ for index, todo in enumerate(todos):
     test2 = f"({index}) {todo}"
     #st.warning(test2)
     #checkbox = st.checkbox(todo, key=todo)
-    checkbox = st.checkbox(test2, key=todo)
+    #checkbox = st.checkbox(test2, key=todo)
+    checkbox = st.checkbox(test2, key=test2)
     if checkbox:
         todos.pop(index)
         functions.write_todos(todos)
-        del st.session_state[todo]
+        #del st.session_state[todo]
+        del st.session_state[test2]
         #st.experimental_rerun()
         st.rerun()
 
